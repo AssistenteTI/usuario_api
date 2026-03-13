@@ -30,11 +30,11 @@ button{
     border-radius: 5px;
 }
 
-#listar, #buscar, #adicionar, #atualizar, #deletar {
+#listar, #busca, #adicionar, #atualizar, #deletar {
     display: none;
 } 
 .titulo:hover #listar,
-.titulo:hover #buscar,
+.titulo:hover #busca,
 .titulo:hover #adicionar,
 .titulo:hover #atualizar,
 .titulo:hover #deletar{

@@ -27,10 +27,11 @@ btnDel.addEventListener("click", () => dados("deletar"))
 
 function dados(funcao) {
     valor = input.value
+    console.log(valor)
 
     console.log(tituloAtua.value.trim())
     if (funcao == "busca") {
-        buscar(input.value.trim())
+        buscar(input.value)
     };
     if (funcao == "adicionar") {
         adicionar(titulo.value.trim(), conteudo.value.trim())
@@ -60,13 +61,14 @@ function buscar(input) {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => response.json())
         .then((dados) => {
-            busca = dados[input].id
-            user = dados[input].userId
-            body = dados[input].body
+            console.log(dados[1].id)
+            let busca = dados[input].id
+            let user = dados[input].userId
+            let body = dados[input].body
             resultado.innerHTML = `<div>
-            <p>ID: ${busca}</p>
-            <p>UserID: ${user}</p>
-            <p>Body: ${body}</p>
+            <p><strong>ID</strong>: ${busca}</p>
+            <p><strong>UserID</strong>: ${user}</p>
+            <p><strong>Body</strong>: ${body}</p>
             </div>`
             console.log(busca)
         });
@@ -86,7 +88,7 @@ function adicionar(titulo, conteudo) {
         .then((response) => response.json())
         .then((json) => {
             console.log(json)
-            resultado.innerHTML =`${json}`
+            resultado.innerHTML =`<strong>ID</strong>:${json.id}<br><strong>Titulo</strong>: ${json.title}<br><strong>Conteudo</strong>: ${json.body}`
         }
     );
 }
@@ -105,7 +107,7 @@ function atualizar(titulo, id) {
         .then((response) => response.json())
         .then((json) => {
             console.log(json)
-            resultado.innerHTML =`${json}`
+            resultado.innerHTML =`<strong>ID</strong>: ${json.id}<br><strong>Titulo</strong>: ${json.title}`
         });
 }
 
@@ -114,6 +116,6 @@ function deletar(id) {
         method: 'DELETE',
         
     }).then(console.log(`${id} deletado`),
-    resultado.innerHTML =`<p>O id ${id} foi deletado</p>`)
+    resultado.innerHTML =`<p>O <strong>id ${id}</strong> foi deletado</p>`)
     .then((response) => console.log(response.status));
 }
