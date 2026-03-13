@@ -5,40 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solutech</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
         <hr>
-        <article>
+        <article class="titulo">
             <h1>Listar</h1>
-            <button id="btnListar">Listar</button>
+            <div id="listar" class = "acoes">
+                <button id="btnListar">Listar</button>
+            </div>
         </article>
         <hr>
-        <article>
+        <article class="titulo">
             <h1>Buscar</h1>
+            <div id="buscar" class="acoes">
             <input type="text" id="buscar" placeholder="Digite um ID">
-            <button id="btnBuscar">Pesquisar</button>
+                <button id="btnBuscar">Pesquisar</button>
+            </div>
+
         </article>
         <hr>
-        <article>
+        <article class="titulo">
             <h1>Adicionar</h1>
-            <input type="text" id="titulo" placeholder="Digite o titulo"><br>
-            <input type="text" id="conteudo" placeholder="Digite o conteudo"><br>
-            <button id="btnAdicionar">Adicionar</button>
+            <div id="adicionar" class="acoes">
+                <input type="text" id="titulo" placeholder="Digite o titulo"><br>
+                <input type="text" id="conteudo" placeholder="Digite o conteudo"><br>
+                <button id="btnAdicionar">Adicionar</button>
+            </div>
+
         </article>
         <hr>
-        <article>
+        <article class="titulo">
             <h1>Atualizar</h1>
-            <input type="number" id="idAtua" placeholder="Digite o ID"><br>
-            <input type="text" id="tituloAtua" placeholder="Digite o titulo"><br>
-            <button id="btnAtualizar">Atualizar</button>
+            <div id="atualizar" class="acoes">
+                <input type="number" id="idAtua" placeholder="Digite o ID"><br>
+                <input type="text" id="tituloAtua" placeholder="Digite o titulo"><br>
+                <button id="btnAtualizar">Atualizar</button>
+            </div>
+
         </article>
         <hr>
-        <article>
+        <article class="titulo">
             <h1>Deletar</h1>
-            <input type="number" id="idDel" placeholder="Digite o ID"><br>
-            <button id="btnDeletar">Deletar</button>
+            <div id="deletar" class="acoes">
+                <input type="number" id="idDel" placeholder="Digite o ID"><br>
+                <button id="btnDeletar">Deletar</button>
+            </div>
+
         </article>
         <hr>
         <article>

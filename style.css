@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body{
+    background-color: rgba(82, 240, 227, 0.89);
+}
+
+main{
+    background-color: white;
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    padding: 5px;
+    width: 100%;
+    margin: 5px 10px 5px auto;
+}
+
+button{
+    margin: 5px;
+    font-weight: bold;
+    padding: 3px;
+    background-color: rgba(66, 156, 149, 0.918);
+    border-radius: 5px;
+}
+
+#listar, #buscar, #adicionar, #atualizar, #deletar {
+    display: none;
+} 
+.titulo:hover #listar,
+.titulo:hover #buscar,
+.titulo:hover #adicionar,
+.titulo:hover #atualizar,
+.titulo:hover #deletar{
+    display: block;
+} 

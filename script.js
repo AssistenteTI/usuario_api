@@ -26,11 +26,11 @@ btnAtualizar.addEventListener("click", () => dados("atualizar"))
 btnDel.addEventListener("click", () => dados("deletar"))
 
 function dados(funcao) {
-    valor = input.value.trim()
+    valor = input.value
 
     console.log(tituloAtua.value.trim())
     if (funcao == "busca") {
-        buscar(valor)
+        buscar(input.value.trim())
     };
     if (funcao == "adicionar") {
         adicionar(titulo.value.trim(), conteudo.value.trim())
@@ -84,7 +84,11 @@ function adicionar(titulo, conteudo) {
         },
     })
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then((json) => {
+            console.log(json)
+            resultado.innerHTML =`${json}`
+        }
+    );
 }
 
 function atualizar(titulo, id) {
@@ -99,7 +103,10 @@ function atualizar(titulo, id) {
         },
     })
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then((json) => {
+            console.log(json)
+            resultado.innerHTML =`${json}`
+        });
 }
 
 function deletar(id) {
